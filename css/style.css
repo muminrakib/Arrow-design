@@ -1,0 +1,68 @@
+/* Your custom styles */
+body {
+  position: relative;
+}
+h1 {
+	font-weight: bolder;
+}
+
+
+/*nav section*/
+.navbar-expand-lg .navbar-collapse {
+	padding-left: 150px;
+}
+header {
+	background-image: url('../img/banner.jpg');
+}
+.navbar {
+    background-color: transparent;
+}
+
+.top-nav-collapse {
+    background-color: #263238;
+}
+
+@media only screen and (max-width: 768px) {
+    .navbar {
+        background-color: #263238;
+    }
+}
+#about #center {
+	background-image: url('../img/about.jpg');
+}
+
+/*servicer starts here*/
+#services {
+	background-color: #e2dcdc;
+}
+#services .block {
+	width: 100%;
+	background-color: #ffffff;
+	padding: 20px;
+	border-radius: 8px;
+}
+
+/*design section*/
+#design .block {
+
+}
+@media (max-width: 780px) {
+	#design .block .flex-row {
+		flex-flow: column;
+	}
+	#design .d-flex {
+		flex-flow: column;
+	}
+	#design .block {
+		min-width: 100%;
+		margin: 4px;
+	}
+}
+/*portfolio section*/
+#portfolio div .d-flex {
+	max-width: 100%
+}
+/*packager section*/
+#package .first {
+	margin: -30px
+}
