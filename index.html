@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
     <title>Arrow Design</title>
-    <link rel="icon" type="image/png" sizes="32x32" href="img/logo.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/fav.png">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Bootstrap core CSS -->
@@ -17,12 +17,12 @@
     <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body data-spy="scroll" data-target="#navbar-example">
+<body data-spy="scroll" data-target=".navbar-nav" data-offset="50">
 
 <!-- HEADER SECTION STARTS -->
 <header>
     <!--Navbar-->
-        <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar" id="navbar-example">
+        <nav id="home" class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar" id="navbar-example">
         <div class="container">
             <!-- Navbar brand -->
         <a class="navbar-brand" href="#home">
@@ -34,30 +34,39 @@
             aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
 
         <!-- Collapsible content -->
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
 
             <!-- Links -->
             <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link white-text" href="#home">Home <span class="sr-only">(current)</span></a>
+                <li class="nav-item">
+                    <a class="nav-link text-warning" href="#home">Home </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link white-text" href="#about">About Us</a>
+                    <a class="nav-link text-warning" href="#about">About Us</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link white-text" href="#services">Services</a>
+                    <a class="nav-link text-warning" href="#services">Services</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link white-text" href="#portfolio">Portfolio</a>
+                    <a class="nav-link text-warning bg-danger disabled" href="">News</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link white-text" href="#team">Our Team</a>
+                    <a class="nav-link text-warning" href="#design">Design</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link white-text" href="#news">News</a>
+                    <a class="nav-link text-warning" href="#team">Our Team</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link white-text" href="#contact">Contact</a>
+                    <a class="nav-link text-warning" href="#portfolio">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-warning" href="#portfolio">Package</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-warning" href="#address">Address</a>
+                </li>
+                <li id="subs" class="nav-item">
+                    <a href="" class="btn btn-default p-2" data-toggle="modal" data-target="#modalContactForm">Contact Us</a>
                 </li>
             </ul>
             <!-- Links -->
@@ -67,7 +76,7 @@
     <!--/.Navbar-->
 
     <!-- banner section starts here -->
-    <div class="container text-white"  id="home">
+    <div class="container text-white">
         <br><br><br><br><br>
         <h1>Welcome to <span class="deep-orange-text">The Award <br>Winning</span> Agency</h1>
         <br><br>
@@ -77,73 +86,119 @@
         <br><br><br><br>
     </div>
 </header>
+<!-- /HEADER SECTION ends -->
+
+<!-- modal Subscription -->
+<div class="modal fade" id="modalContactForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <h4 class="modal-title w-100 font-weight-bold">Write to us</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body mx-3">
+                <div class="md-form mb-5">
+                    <i class="fa fa-user prefix grey-text"></i>
+                    <input type="text" id="form34" class="form-control validate">
+                    <label data-error="wrong" data-success="right" for="form34">Your name</label>
+                </div>
+
+                <div class="md-form mb-5">
+                    <i class="fa fa-envelope prefix grey-text"></i>
+                    <input type="email" id="form29" class="form-control validate">
+                    <label data-error="wrong" data-success="right" for="form29">Your email</label>
+                </div>
+
+                <div class="md-form mb-5">
+                    <i class="fa fa-tag prefix grey-text"></i>
+                    <input type="text" id="form32" class="form-control validate">
+                    <label data-error="wrong" data-success="right" for="form32">Subject</label>
+                </div>
+
+                <div class="md-form">
+                    <i class="fa fa-pencil prefix grey-text"></i>
+                    <textarea type="text" id="form8" class="md-textarea form-control" rows="4"></textarea>
+                    <label data-error="wrong" data-success="right" for="form8">Your message</label>
+                </div>
+
+            </div>
+            <div class="modal-footer d-flex justify-content-center">
+                <button class="btn btn-unique">Send <i class="fa fa-paper-plane-o ml-1"></i></button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /modal Subscription -->
 
 <!-- About section starts -->
 <article id="about">
     <div class="container d-md-flex">
-        <div class="col-md-3">
+        <div class="row">
+            <!-- 1st column -->
+            <div class="col-md-3">
             <br><br>
-            <h1>About <br><span class="deep-orange-text">Creative</span><br> Agecny</h1>
+            <h1 class="text-capitalize">ABOUT <br><span class="deep-orange-text">CREATIVE</span><br> AGENCY</h1>
             <br><br>
-            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+            <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
         </div>
-
+        <!-- 2nd column -->
         <div class="col-md-4 text-white text-right" id="center">
-            <br><br>
-            <div class="flex-column">
-                <h2>Working hours</h1>
-                <h4>Designer Name</h3>
-            </div>
-            <br><br>
-            <div class="flex-column">
-                <h2>Working hours</h1>
-                <h4>Designer Name</h3>
-            </div>
-            <hr><br><br>
-            <div class="flex-column">
-                <h2>Working hours</h1>
-                <h4>Designer Name</h3>
-            </div>
-            <br><br>
-            <div class="flex-column">
-                <h2>Working hours</h1>
-                <h4>Designer Name</h3>
+            <div class="d-flex flex-column justify-content-around h-100">
+                <br>
+                <div class="flex-column">
+                    <h2>Working hours</h1>
+                    <h4>Designer Name</h3>
+                </div>
+                <hr>
+                <div class="flex-column">
+                    <h2>Working hours</h1>
+                    <h4>Designer Name</h3>
+                </div>
+                <hr>
+                <div class="flex-column">
+                    <h2>Working hours</h1>
+                    <h4>Designer Name</h3>
+                </div>
+                <hr>
+                <div class="flex-column">
+                    <h2>Working hours</h1>
+                    <h4>Designer Name</h3>
+                </div>
             </div>
         </div>  
+        <!-- 3rd column -->
         <div class="col-md-5">
-            <br><br>
-            <div class="d-flex">
-            <p><br><br><i class="fa fa-cc fa-4x p-2"></i></p>
-            <p class="lead p-3">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            </p>
+            <div class="d-flex flex-column h-100 justify-content-around">
+                <br>
+                <dl class="d-flex flex-row">
+                    <dd><i class="fa fa-bookmark fa-2x p-3"></i></dd>
+                    <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua.  </dd>
+                </dl>
+                <dl class="d-flex flex-row">
+                    <dd><i class="fa fa-bookmark fa-2x p-3"></i></dd>
+                    <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. </dd>
+                </dl>
+                <dl class="d-flex flex-row">
+                    <dd><i class="fa fa-bookmark fa-2x p-3"></i></dd>
+                    <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua.  </dd>
+                </dl>
+                <dl class="d-flex flex-row">
+                    <dd><i class="fa fa-bookmark fa-2x p-3"></i></dd>
+                    <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua.</dd>
+                </dl>
             </div>
-            <div class="d-flex">
-            <p><br><br><i class="fa fa-cc fa-4x p-2"></i></p>
-            <p class="lead p-3">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            </p>
-            </div>
-            <div class="d-flex">
-            <p><br><br><i class="fa fa-cc fa-4x p-2"></i></p>
-            <p class="lead p-3">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            </p>
-            </div>
-            <div class="d-flex">
-            <p><br><br><i class="fa fa-cc fa-4x p-2"></i></p>
-            <p class="lead p-3">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            </p>
-            </div>
+        
+        
         </div>
     </div>
 </article>
-
+<!-- /About section ENDS -->
 
 <!-- SERVICES SECTION STARTS  -->
 <section id="services">
@@ -153,249 +208,306 @@
         <div class="col-md-3 align-self-md-end">
             <div class=""> <h1>OUR <br><span class="deep-orange-text">SPECIAL</span><br> SERVICES</h1> </div>
         </div>
-
         <div class="col-md-3">
-                <div class="block my-3">
-                    <i class="fa fa-windows fa-2x" aria-hidden="true"></i>
-                    <h3 class="text-danger">Tile 1</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-                </div>
-                <div class="block">
-                    <i class="fa fa-windows fa-2x" aria-hidden="true"></i>
-                    <h3 class="text-danger">Tile 2</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-                </div>
-        </div>
-        <div class="col-md-3">
-                <div class="block my-3">
-                    <i class="fa fa-windows fa-2x" aria-hidden="true"></i>
-                    <h3 class="text-danger">Tile 1</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-                </div>
-                <div class="block">
-                    <i class="fa fa-windows fa-2x" aria-hidden="true"></i>
-                    <h3 class="text-danger">Tile 2</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-                </div>
+            <div class="card p-3 m-2">
+                <h3 class="p-3"><i class="fa fa-globe fa-2x" aria-hidden="true"></i></h3>
+                <h4 class="card-title"><span class="deep-orange-text">ACHIEVES</span></h4>
+                <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+            </div>    
+            <div class="card p-3 m-2">
+                <h3 class="p-3"><i class="fa fa-cloud-upload fa-2x" aria-hidden="true"></i></h3>
+                <h4 class="card-title"><span class="deep-orange-text">PERFECT</span></h4>
+                <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+            </div> 
         </div>
         <div class="col-md-3">
-                <div class="block my-3">
-                    <i class="fa fa-windows fa-2x" aria-hidden="true"></i>
-                    <h3 class="text-danger">Tile 1</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-                </div>
-                <div class="block">
-                    <i class="fa fa-windows fa-2x" aria-hidden="true"></i>
-                    <h3 class="text-danger">Tile 2</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-                </div>
+                <div class="card p-3 m-2">
+                    <h3 class="p-3"><i class="fa fa-upload fa-2x" aria-hidden="true"></i></h3>
+                    <h4 class="card-title"><span class="deep-orange-text">DESIGNER</span></h4>
+                    <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+                </div> 
+                <div class="card p-3 m-2">
+                    <h3 class="p-3"><i class="fa fa-edit fa-2x" aria-hidden="true"></i></h3>
+                    <h4 class="card-title"><span class="deep-orange-text">SPECIAL</span></h4>
+                    <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+                </div> 
+        </div>
+        <div class="col-md-3">
+                <div class="card p-3 m-2">
+                    <h3 class="p-3"><i class="fa fa-stumbleupon fa-2x" aria-hidden="true"></i></h3>
+                    <h4 class="card-title"><span class="deep-orange-text">ANOTHER</span></h4>
+                    <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+                </div> 
+                <div class="card p-3 m-2">
+                    <h3 class="p-3"><i class="fa fa-umbrella fa-2x" aria-hidden="true"></i></h3>
+                    <h4 class="card-title"><span class="deep-orange-text">BEST</span></h4>
+                    <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+                </div> 
         </div>
         </div>
-        
     </div>
     <br><br>
 </section>
-
+<!-- /SERVICES SECTION Ends  -->
 
 <!-- design section starts -->
 <section id="design">
-    <br><br>
-    <div class="container">
+    <div class="container p-5">
         <div class="row">
-            <div class="col-md-2 text-uppercase align-self-center"><h1>Latest <br><span class="deep-orange-text">Designs</span><br>Blog</h1> 
+            <div class="col-md-3">
+                <div class="text-uppercase d-flex flex-column justify-content-end h-100">
+                    <h1>Latest <br><span class="deep-orange-text">Designs</span><br>Blog</h1> 
+                </div>
             </div>
         <!-- second column here -->
-        <div class="col-md-7">
-            <div class="block row">
-                <figure class="float-md-left"><img class="img-thumbnail" src="img/latest1.jpg" alt=""></figure>
-                <div class="col-6">
-                    <h4> Designed and built with care</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-                </div>
+        <div class="col-md-3">
+            <div class="d-flex flex-column justify-content-around h-100">
+                <figure class="float-md-left"><img class="img-thumbnail" src="img/latest1.jpg" alt="">
+                    <div class="date-tag text-white bg-danger p-2 d-inline"> <h4> 24 </h4><h6 class="small"> April' 18</h6 class="small"></div>
+                </figure>
+                <figure class="float-md-left"><img class="img-thumbnail" src="img/latest2.jpg" alt="">
+                    <div class="date-tag text-white bg-danger p-2 d-inline"> <h4> 24 </h4><h6 class="small"> April' 18</h6 class="small"></div>
+                </figure>
+                <figure class="float-md-left"><img class="img-thumbnail" src="img/latest3.jpg" alt="">
+                    <div class="date-tag text-white bg-danger p-2 d-inline"> <h4> 24 </h4><h6 class="small"> April' 18</h6 class="small"></div>
+                </figure>
             </div>
-            <div class="block row">
-                <figure class="float-md-left"><img class="img-thumbnail" src="img/latest2.jpg" alt=""></figure>
-                <div class="col-6">
+        </div>
+
+        <!-- third column -->
+        <div class="col-md-3">
+            <div class="d-flex flex-column justify-content-around h-100">
+                <div class="">
                     <h4> Designed and built with care</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 </div>
-            </div>
-            <div class="block row">
-                <figure class="float-md-left"><img class="img-thumbnail" src="img/latest3.jpg" alt=""></figure>
-                <div class="col-6">
+                <div class="">
                     <h4> Designed and built with care</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+                <div class="">
+                    <h4> Designed and built with care</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 </div>
             </div>
         </div>
 
-
-        <!-- third colum (picture) -->
+        <!-- fourth column -->
         <div class="col-md-3">
             <figure>
-                <img src="img/latest4.jpg" class="img-fluid">
+                <img id="" src="img/latest4.jpg" class="img-fluid">
             </figure>
-        </div>
+            <div class="rel-date text-white bg-danger p-2 d-inline"> <h4> 24 </h4><h6 class="small"> April' 18</h6 class="small"></div>
+            <div id="rel-image" class="text-white p-2">
+                <h4> Designed and built with care</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
         </div>
     </div>
 </section>
+<!-- /design section ends -->
 
 <!-- Team section starts -->
 <section id="team" class="grey lighten-2">
-    <br><br>
     <div class="container">
         <div class="row">
-            <div class="col-md-3 align-self-md-end">
-            <h1 class="text-uppercase">our <br><span class="deep-orange-text">team</span><br>members</h1> 
+            <div class="col-md-3">
+                <div class="d-flex flex-column justify-content-end h-100"> <h1>OUR <br><span class="deep-orange-text">TEAM</span><br> MEMBERS</h1> <br></div>
+            </div>
+            <div class="col-md-3 justify-content-around h-100">
+            <figure class="figure">
+                <br>
+                <img class="img-fluid" src="img/team1.jpg" alt="disigner image">
+                <figcaption>
+                    <h2 class=""><br>Desiner Name</h2>
+                    <h4 class="text-danger">Graphic Designer</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+                </figcaption>
+            </figure>
         </div>
-        <div class="col-md-3">
-            <img src="img/team1.jpg" alt="disigner image">
-            <h3 class=""><br>Desiner Name</h3>
-            <h4 class="text-danger">Graphic Designer</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+        <div class="col-md-3 justify-content-around h-100">
+            <figure>
+                <br>
+                <img class="img-fluid" src="img/team2.jpg" alt="disigner image">
+                <figcaption>
+                    <h2 class=""><br>Desiner Name</h2>
+                    <h4 class="text-danger">Graphic Designer</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+                </figcaption>
+            </figure>
         </div>
-        <div class="col-md-3">
-            <img src="img/team2.jpg" alt="disigner image">
-            <h3 class=""><br>Desiner Name</h3>
-            <h4 class="text-danger">Graphic Designer</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-        </div>
-        <div class="col-md-3">
-            <img src="img/team3.jpg" alt="disigner image">
-            <h3 class=""><br>Desiner Name</h3>
-            <h4 class="text-danger">Graphic Designer</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-        </div>
-        </div>
-        
+        <div class="col-md-3 justify-content-around h-100">
+            <figure>
+                <br>
+                <img class="img-fluid" src="img/team3.jpg" alt="disigner image">
+                <figcaption>
+                    <h2 class=""><br>Desiner Name</h2>
+                    <h4 class="text-danger">Graphic Designer</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+                </figcaption>
+            </figure>
+        </div> 
+        </div> 
     </div>
-    <br><br>
 </section>
+<!-- /Team section ends -->
 
 
 <!-- portfolio section starts  -->
 <section id="portfolio">
-    <div class="d-flex">
-        <figure>
-            <img class="img-fluid" src="img/portfolio1.jpg" alt="portfolio1.jpg">   
-        </figure>
-        <figure>
-            <img class="img-fluid" src="img/portfolio2.jpg" alt="portfolio2.jpg">   
-        </figure>
-    </div>
-    <div class="d-flex">
-        <figure>
-            <img class="img-fluid" src="img/portfolio3.jpg" alt="portfolio3.jpg">   
-        </figure>
-        <div>
-            <h1 class="text-uppercase align-self-end m-4">
-                <br>our <br><span class="deep-orange-text">portfolio</span><br>gallary
-            </h1>  
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6 p-0">
+                <img class="img-fluid" src="img/portfolio1.jpg" alt="portfolio1.jpg"> 
+            </div>
+            <div class="col-md-6 p-0">
+                <img class="img-fluid" src="img/portfolio2.jpg" alt="portfolio1.jpg"> 
+            </div>
         </div>
-        <div class="d-flex flex-column">
-            <img class="img-fluid" src="img/portfolio4.jpg" alt="portfolio1.jpg">   
-            <img class="img-fluid" src="img/portfolio5.jpg" alt="portfolio2.jpg">   
+            <!-- 2nd row -->
+        <div class="row">
+            <div class="col-md-6 p-0">
+                <div class="row">
+                    <div class="col"> 
+                        <img class="" src="img/portfolio3.jpg" width="270" alt="portfolio1.jpg"> 
+                    </div>
+                    <div class="col">
+                        <div id="text-portfolio" class="text-uppercase d-flex h-100"> <h1 class="align-self-end">OUR <br><span class="deep-orange-text">portfolio</span><br> gallery</h1> </div> 
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-6 p-0">
+                        <img class="img-fluid" src="img/portfolio4.jpg" alt="portfolio1.jpg"> 
+                        <img class="img-fluid" src="img/portfolio5.jpg" alt="portfolio1.jpg"> 
+                    </div>
+                    <div class="col-md-6 p-0">
+                        <img class="img-fluid" src="img/portfolio6.jpg" alt="portfolio1.jpg"> 
+                     </div> 
+                </div>
+            </div>
         </div>
-        <figure>
-            <img class="img-fluid" src="img/portfolio6.jpg" alt="portfolio6.jpg">   
-        </figure>
+            <!-- 2nd row -->
     </div>
 </section>
-
-
+<!-- /portfolio section ends  -->
 
 
 <!-- package section starts here -->
 <section id="package" class="grey lighten-2">
-    <div class="container">
-        <br><br>
-        <!--Grid row-->
+    <div class="container py-4">
     <div class="row">
-<!--Grid column-->
-    <div class="col-md-3 first">
-        <h1 class="text-uppercase align-self-end m-4">
-            <br>our <br><span class="deep-orange-text">Design</span><br>package
-        </h1> 
+        <!--Grid column-->
+    <div class="col-md-3">
+        <div class="d-flex flex-column justify-content-end h-100"> <h1>OUR <br><span class="deep-orange-text">Design</span><br> Package</h1> <br></div>
     </div>
     <!--Grid column-->
-    <div class="col-md-3 mb-r white m-1 text-center">
-        <h1 class=""><i class="fa fa-area-chart fa-1x"></i></h1>
-        <h4 class="font-bold mt-3">Designer Name</h4>
-        <h5 class="font-bold mt-3 text-danger">Graphic Designer</h5>
-        <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-        </p>
-        <h2 class="font-weight-bold">$50</h2>
-        <button class="btn btn-danger"> Read More </button>
+    <div class="col-md-3 text-center">
+        <div class="card p-3 m-1">
+            <h1 class=""><i class="fa fa-shirtsinbulk fa-1x"></i></h1>
+            <h3 class="font-bold mt-3">Designer Name</h3>
+            <h4 class="font-bold text-danger">Graphic Designer</h4>
+            <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            </p>
+            <h2>$50</h2>
+            <button class="btn btn-danger"> Read More </button>
+        </div>
     </div>
     <!--Grid column-->
-    <div class="col-md-3 mb-r white m-1 text-center">
-        <h1 class=""><i class="fa fa-area-chart fa-1x"></i></h1>
-        <h4 class="font-bold mt-3">Designer Name</h4>
-        <h5 class="font-bold mt-3 text-danger">Graphic Designer</h5>
-        <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-        </p>
-        <h2 class="font-weight-bold">$500</h2>
-        <button class="btn btn-danger"> Read More </button>
-    </div>
+    <div class="col-md-3 text-center">
+        <div class="card p-3 m-1">
+            <h1 class=""><i class="fa fa-binoculars fa-1x"></i></h1>
+            <h3 class="font-bold mt-3">Designer Name</h3>
+            <h4 class="font-bold text-danger">Graphic Designer</h4>
+            <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            </p>
+            <h2>$100</h2>
+            <button class="btn btn-danger"> Read More </button>
+        </div>
+    </div>   
     <!--Grid column-->
-    <div class="col-md-3 mb-r white m-1 text-center">
-        <h1 class=""><i class="fa fa-area-chart fa-1x"></i></h1>
-        <h4 class="font-bold mt-3">Designer Name</h4>
-        <h5 class="font-bold mt-3 text-danger">Graphic Designer</h5>
-        <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-        </p>
-        <h2 class="font-weight-bold">$1000</h2>
-        <button class="btn btn-danger"> Read More </button>
+    <div class="col-md-3 text-center">
+        <div class="card p-3 m-1">
+            <h1 class=""><i class="fa fa-stethoscope fa-1x"></i></h1>
+            <h3 class="font-bold mt-3">Designer Name</h3>
+            <h4 class="font-bold text-danger">Graphic Designer</h4>
+            <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            </p>
+            <h2>$500</h2>
+            <button class="btn btn-danger"> Read More </button>
+        </div>
     </div>
     <!--Grid row-->
     </div>    
 </section>
+<!-- package section starts here -->
 
 <!-- contact section starts -->
-<section id="contact" class="container-fluid">
-    <div class="row">
-        <div class="col-md-5">
-            <h1 class="text-uppercase align-self-end m-4  text-center">
-                <br>How<br><span class="deep-orange-text">Find Us</span><br>
-            </h1> 
-            <div class="d-flex flex-lg-column">
-                <div>
-                <i class="fa fa-android fa-4x float-left px-5" aria-hidden="true"></i>
-                <dt>Address</dt>
-                <dd>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</dd>
+<section id="address">
+   <div class="container-fluid">
+      <div class="row">
+         <div class="col-md-2 px-0"></div>
+         <div class="col-md-3 px-0 py-4">
+            <h1 class="text-uppercase text-center">
+               How<br><span class="deep-orange-text">Find Us</span><br>
+            </h1>
+            <div class="d-flex flex-column">
+               <div class="row">
+                  <div class="col-3">
+                      <i class="fa fa-map-marker fa-4x float-left pr-3" aria-hidden="true"></i>
+                  </div>
+                  <div class="col-8">
+                    <dt class="text-danger">Address</dt>
+                    <dd>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</dd>
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="col-3">
+                      <i class="fa fa-phone fa-4x float-left pr-3" aria-hidden="true"></i>
+                  </div>
+                  <div class="col-8">
+                    <dt class="text-danger">Call Us</dt>
+                    <dd>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</dd>
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="col-3">
+                      <i class="fa fa-envelope fa-4x float-left pr-3" aria-hidden="true"></i>
+                  </div>
+                  <div class="col-8">
+                    <dt class="text-danger">Email</dt>
+                    <dd>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</dd>
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="col-3">
+                      <i class="fa fa-globe fa-4x float-left pr-3" aria-hidden="true"></i>
+                  </div>
+                  <div class="col-8">
+                    <dt class="text-danger">Website</dt>
+                    <dd>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</dd>
+                  </div>
+               </div>
             </div>
-            <div>
-                <i class="fa fa-android fa-4x float-left px-5" aria-hidden="true"></i>
-                <dt>Address</dt>
-                <dd>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</dd>
-            </div>
-            <div>
-                <i class="fa fa-android fa-4x float-left px-5" aria-hidden="true"></i>
-                <dt>Address</dt>
-                <dd>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</dd>
-            </div>
-            <div>
-                <i class="fa fa-android fa-4x float-left px-5" aria-hidden="true"></i>
-                <dt>Address</dt>
-                <dd>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</dd>
-            </div>
-            </div>
-        </div>
-
-        <div class="col-md-7">
-            <figure>
-                <img class="img-fluid" src="img/contact.jpg">
+         </div>
+         <div class="col-md-7 px-0">
+            <figure class="figure">
+               <img class="img-fluid" src="img/contact.jpg">
             </figure>
-        </div>
-    </div>
+         </div>
+      </div>
+   </div>
 </section>
 
-<footer class="grey lighten-2 text-center">
-    <br>
-     Copyright © 2017. Design by PSDFreebies.com (by Abdul Mumin)
-     <br>
-</footer>
+<!-- footer starts here -->
+<footer class="grey lighten-2 text-center p-4">
+     Copyright © 2017. Design by PSDFreebies.com (by Abdul Mumin' 2018) 
 
+        
+        <a href="#home" title=""> <h4 id="top" type="button" class="btn btn-primary"><i class="fa fa-chevron-circle-up">top</i></h4></a>
+</footer>
+<!-- footer ends here -->
 
 
 
@@ -409,7 +521,8 @@
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="js/mdb.min.js"></script>
     <!-- custom JavaScript -->
-    <script type="text/javascript" src="custom.js"></script>
+    <script type="text/javascript" src="js/smooth-scroll.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
 
 </body>
 </html>
