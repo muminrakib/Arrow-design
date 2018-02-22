@@ -1,113 +1,181 @@
-/* Your custom styles */
-/*fonts customizaion*/
-* {font-family: 'Roboto Condensed', sans-serif;}
-h1, h2, h3, h4, h5, h6 {font-weight: bold}
+/*global customizaion*/
+
+* {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold
+}
+
 @media (max-width: 400px) {
-	h1  {font-size: 6.5vw}
-	h2 { font-size: 6vw}
-	h3 {font-size: 5.5vw}
-	h4 {font-size: 5vw}
-	h5 {font-size: 4.5vw}
-	h6 {font-size: 4vw}
-	p {font-size: 4.5vw}
-	}
-.cover {object-fit: cover !important;}
-/*fonts customizaion*/
+  h1 {
+    font-size: 6.5vw
+  }
+  h2 {
+    font-size: 6vw
+  }
+  h3 {
+    font-size: 5.5vw
+  }
+  h4 {
+    font-size: 5vw
+  }
+  h5 {
+    font-size: 4.5vw
+  }
+  h6 {
+    font-size: 4vw
+  }
+  p {
+    font-size: 4.5vw
+  }
+}
+
+.cover {
+  object-fit: cover !important;
+}
+
+
+/*global customizaion*/
+
 body {
   position: relative !important;
 }
+
+
 /*logo*/
+
 .navbar-brand img {
-	height: 40px !important;
+  height: 40px !important;
 }
+
+
 /*nav section*/
+
 .navbar-expand-lg .navbar-collapse {
-	padding-left: 150px;
+  padding-left: 150px;
 }
-header {
-	background-image: url('../img/banner.jpg');
-}
+
 .navbar {
-    background-color: transparent;
+  background-color: transparent;
 }
 
 .top-nav-collapse {
-    background-color: #263238;
+  background-color: #263238;
 }
 
 @media only screen and (max-width: 768px) {
-    .navbar {
-        background-color: #263238;
-    }
+  .navbar {
+    background-color: #263238;
+  }
 }
+
+
+/*jumbtrol*/
+
+#bn-img {
+  width: 100%;
+  background-image: url('../img/banner.jpg');
+  background-repeat: space;
+  background-attachment: scroll;
+}
+
+#bn-txt {
+  font-size: 1.2em;
+  padding-top: 25vw;
+  padding-bottom: 5vw;
+}
+
+
 /*ABOUT STARTS*/
+
 #about #center {
-	background-image: url('../img/about.jpg');
-	background-attachment: fixed;
-	padding-right: 3rem;
+  background-image: url('../img/about.jpg');
+  background-attachment: fixed;
+  padding-right: 3rem;
 }
 
 #about i {
-	color: #84807f;
-	background-color: white;
-	border: #ED5A32 10px solid;
-	border-radius: 55%;
-	position: relative;
-	right: 3rem;
+  color: #84807f;
+  background-color: white;
+  border: #ED5A32 10px solid;
+  border-radius: 55%;
+  position: relative;
+  right: 3rem;
 }
+
 @media (max-width: 580px) {
-	#about i {
-		position: relative;
-		right: 1rem;
-	}
+  #about i {
+    position: relative;
+    right: 1rem;
+  }
 }
+
+
 /*servicer starts here*/
+
 #services {
-	background-color: #e2dcdc;
+  background-color: #e2dcdc;
 }
+
 #services .block {
-	width: 100%;
-	background-color: #ffffff;
-	padding: 20px;
-	border-radius: 8px;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
 }
+
+
 /*designe section*/
+
 #design figure {
-	position: relative;
+  position: relative;
 }
+
 #design .date-tag {
-	position: absolute;
-	bottom: 5%;
-	left: 5%;
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
 }
+
 #design .date-tag h4,
 #design .date-tag h6 {
-	margin: 0;
+  margin: 0;
 }
+
 #rel-image {
-	position: absolute;
-	width: 200px;
-    bottom: 5%
+  position: absolute;
+  width: 200px;
+  bottom: 5%
 }
+
 #design .rel-date {
-	position: absolute;
-	top: 5%;
-	left: 10%;
+  position: absolute;
+  top: 5%;
+  left: 10%;
 }
+
 
 /*portfolio section*/
 
 
-
 /*packager section*/
+
 #package button:hover #package h2 {
-	color: red !important;
+  color: red !important;
 }
+
 
 /*top*/
 
 #top {
-	position: fixed;
-	right: 2%;
-	bottom: 2%;
+  position: fixed;
+  right: 2%;
+  bottom: 2%;
 }
