@@ -14,6 +14,6 @@ $("#top").click(function(){
     $(this).toggleClass("btn-warning");
 });
 $(".nav-item").click(function(){
-    $(this).addClass("active");
-    $(".nav-item").not(this).removeClass("active");
+    $(this).addClass("active bg-info");
+    $(".nav-item").not(this).removeClass("active bg-info");
 });

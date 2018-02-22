@@ -98,34 +98,39 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body mx-3">
-                <div class="md-form mb-5">
-                    <i class="fa fa-user prefix grey-text"></i>
-                    <input type="text" id="form34" class="form-control validate">
-                    <label data-error="wrong" data-success="right" for="form34">Your name</label>
-                </div>
-
-                <div class="md-form mb-5">
-                    <i class="fa fa-envelope prefix grey-text"></i>
-                    <input type="email" id="form29" class="form-control validate">
-                    <label data-error="wrong" data-success="right" for="form29">Your email</label>
-                </div>
-
-                <div class="md-form mb-5">
-                    <i class="fa fa-tag prefix grey-text"></i>
-                    <input type="text" id="form32" class="form-control validate">
-                    <label data-error="wrong" data-success="right" for="form32">Subject</label>
-                </div>
-
-                <div class="md-form">
-                    <i class="fa fa-pencil prefix grey-text"></i>
-                    <textarea type="text" id="form8" class="md-textarea form-control" rows="4"></textarea>
-                    <label data-error="wrong" data-success="right" for="form8">Your message</label>
-                </div>
-
-            </div>
+            <!-- modal body -->
+            <div class="container text-info">
+            <form action="contact.php" method="POST">
+               <div class="col-md-6 form-line">
+                  <div class="form-group">
+                     <label for="exampleInputUsername"><h5>Your name</h5></label>
+                     <input name="name" type="text" class="form-control" id="Name" placeholder=" Enter Name">
+                  </div>
+                  <div class="form-group">
+                     <label for="exampleInputEmail"><h5>Email Address</h5></label>
+                     <input name="email" type="email" class="form-control" id="exampleInputEmail" placeholder=" Enter Email id">
+                  </div>
+                  <div class="form-group">
+                     <label for="telephone"><h5>Mobile No.</h5></label>
+                     <input name="phone" type="tel" class="form-control" id="telephone" placeholder=" Enter 10-digit mobile no.">
+                  </div>
+                  <div class="form-group">
+                    
+                  </div>
+               </div>
+               <div class="col-md-6">
+                  <div class="form-group">
+                     <label for ="description"> <h5>Message</h5></label>
+                     <textarea  name="message" class="form-control" id="description" placeholder=" Enter Your Message"></textarea>
+                  </div>
+               </div>
+            </form>
+         </div>
+            <!-- modal footer -->
             <div class="modal-footer d-flex justify-content-center">
-                <button class="btn btn-unique">Send <i class="fa fa-paper-plane-o ml-1"></i></button>
+                <div>
+                 <button type="submit" class="btn btn-danger"><i class="fa fa-paper-plane" aria-hidden="true"></i>  Send Message</button>
+              </div>
             </div>
         </div>
     </div>
@@ -356,39 +361,35 @@
 <!-- portfolio section starts  -->
 <section id="portfolio">
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-6 p-0">
-                <img class="img-fluid" src="img/portfolio1.jpg" alt="portfolio1.jpg"> 
-            </div>
-            <div class="col-md-6 p-0">
-                <img class="img-fluid" src="img/portfolio2.jpg" alt="portfolio1.jpg"> 
-            </div>
+      <!-- 2 image row -->
+      <div class="row">
+        <div class="col-md-6 px-0">
+          <img class="w-100" src="img/portfolio1.jpg" alt="">
         </div>
-            <!-- 2nd row -->
-        <div class="row">
-            <div class="col-md-6 p-0">
-                <div class="row">
-                    <div class="col"> 
-                        <img class="" src="img/portfolio3.jpg" width="270" alt="portfolio1.jpg"> 
-                    </div>
-                    <div class="col">
-                        <div id="text-portfolio" class="text-uppercase d-flex h-100"> <h1 class="align-self-end">OUR <br><span class="deep-orange-text">portfolio</span><br> gallery</h1> </div> 
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="row">
-                    <div class="col-md-6 p-0">
-                        <img class="img-fluid" src="img/portfolio4.jpg" alt="portfolio1.jpg"> 
-                        <img class="img-fluid" src="img/portfolio5.jpg" alt="portfolio1.jpg"> 
-                    </div>
-                    <div class="col-md-6 p-0">
-                        <img class="img-fluid" src="img/portfolio6.jpg" alt="portfolio1.jpg"> 
-                     </div> 
-                </div>
-            </div>
+        <div class="col-md-6 px-0">
+          <img class="w-100" src="img/portfolio2.jpg" alt="">
         </div>
-            <!-- 2nd row -->
+      </div>
+      <!-- /2 image row -->
+      <!-- 4 image row -->
+      <div class="row">
+        <div class="col-md-3 px-0">
+          <img class="w-100" src="img/portfolio3.jpg" alt="">
+        </div>
+        <div class="col-md-3 px-0">
+         <div class="d-flex flex-column justify-content-end p-3 h-100">
+            <h1 class="">OUR <br><span class="deep-orange-text">portfolio</span><br> gallery</h1>
+          </div>
+        </div>
+        <div class="col-md-3 px-0">
+          <img class="w-100 h-50" src="img/portfolio4.jpg" alt="">
+          <img class="w-100 h-50" src="img/portfolio5.jpg" alt="">
+        </div>
+        <div class="col-md-3 px-0">
+          <img class="h-100 w-100" src="img/portfolio6.jpg" alt="">
+        </div>
+              </div>
+      <!-- /4 image row -->
     </div>
 </section>
 <!-- /portfolio section ends  -->
@@ -443,12 +444,13 @@
 </section>
 <!-- package section starts here -->
 
-<!-- contact section starts -->
+<!-- address section starts -->
 <section id="address">
    <div class="container-fluid">
       <div class="row">
          <div class="col-md-2 px-0"></div>
-         <div class="col-md-3 px-0 py-4">
+         <!-- text column -->
+         <div class="col-md-3 h-100">
             <h1 class="text-uppercase text-center">
                How<br><span class="deep-orange-text">Find Us</span><br>
             </h1>
@@ -491,6 +493,7 @@
                </div>
             </div>
          </div>
+         <!-- /text column -->
          <div class="col-md-7 px-0">
             <figure class="figure">
                <img class="img-fluid" src="img/contact.jpg">
@@ -499,6 +502,7 @@
       </div>
    </div>
 </section>
+<!-- address section ends -->
 
 <!-- footer starts here -->
 <footer class="grey lighten-2 text-center p-4">
