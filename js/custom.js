@@ -2,7 +2,7 @@
 // ==SmoothScroll==
 var scroll = new SmoothScroll('a[href*="#"]');
 // scrollspy
-
+$('body').scrollspy({ target: '#navbarSupportedContent' })
 
 //==addclass removeclass practice==
 $("#top").click(function(){
@@ -15,3 +15,6 @@ $(".nav-item").click(function(){
 
 //==wow==
 new WOW().init();
+
+// site preloader -- also uncomment the div in the header and the css style for #preloader
+// site preloader -- also uncomment the div in the header and the css style for #preloader
