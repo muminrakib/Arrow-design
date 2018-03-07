@@ -47,7 +47,7 @@ body {
     background-repeat: space;
   }
   #bn-img {
-    text-shadow: 0px 5px 10px black;
+    text-shadow: 0px 5px 10px #a3675c;
   }
   #bn-txt {
     font-size: 1.2em;
@@ -61,14 +61,14 @@ body {
     padding-right: 3rem;
   }
   #about h2 {
-    text-shadow: 0px 5px 10px grey;
+    text-shadow: 0px 5px 10px #a3675c;
   }
-/*  #about dl:hover {
-    background-color: #f1f1f2;
-    box-shadow: 0px 15px 30px grey;
-    border-radius: 5px;
-    transition: 0.7s;
-  }*/
+  /*  #about dl:hover {
+      background-color: #f1f1f2;
+      box-shadow: 0px 15px 30px grey;
+      border-radius: 5px;
+      transition: 0.7s;
+    }*/
   #about i {
     color: #84807f;
     background-color: white;
@@ -78,15 +78,21 @@ body {
     right: 3rem;
   }
   #about i:hover {
-    animation-name: name;
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out;
+    -webkit-animation-name: name;
+            animation-name: name;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+  }
+  @-webkit-keyframes name {
+    0% {-webkit-transform: rotate(0deg);transform: rotate(0deg);}
+    100% {-webkit-transform: rotate(360deg);transform: rotate(360deg);}
   }
   @keyframes name {
-    0% {transform: rotate(0deg);}
-    100% {transform: rotate(360deg);}
+    0% {-webkit-transform: rotate(0deg);transform: rotate(0deg);}
+    100% {-webkit-transform: rotate(360deg);transform: rotate(360deg);}
   }
-
 
   @media (max-width: 580px) {
     #about i {
@@ -94,13 +100,12 @@ body {
       left: -0.5rem
     }
   }
-
 /*servicer starts here*/
   #services {
-    background-color: #e2dcdc;
+    background-color: #f1f1f2;
   }
   #services h2 {
-    text-shadow: 0px 5px 10px grey;
+    text-shadow: 0px 5px 10px #a3675c;
   }
 
   #services .block {
@@ -110,9 +115,11 @@ body {
     border-radius: 8px;
   }
   #services .card:hover {
-    background-color: #f1f1f2;
-    box-shadow: 0px 15px 30px grey;
+    background-color: #ede1de;
+
     cursor: copy;
+    -webkit-transition: 0.7s;
+    -o-transition: 0.7s;
     transition: 0.7s;
   }
 
@@ -121,16 +128,20 @@ body {
     position: relative;
   }
   #design h2 {
-    text-shadow: 0px 5px 10px grey;
+    text-shadow: 0px 5px 10px  #a3675c;
   }
   #design #image figure:hover {
-    background-color: #f1f1f2;
-    box-shadow: 0px 15px 30px grey;
+    background-color: #a3675c;
+
+    -webkit-transition: 0.7s;
+    -o-transition: 0.7s;
     transition: 0.7s;
   }
   #design .card:hover  {
-    background-color: #f1f1f2;
-    box-shadow: 0px 15px 30px grey;
+    background-color: #ede1de;
+
+    -webkit-transition: 0.7s;
+    -o-transition: 0.7s;
     transition: 0.7s;
   }
   #design .date-tag {
@@ -152,63 +163,80 @@ body {
     top: 5%;
     left: 10%;
   }
-
 /*team section*/
+  #team {
+    background-color: #f1f1f2;
+  }
   #team h2 {
-    text-shadow: 0px 5px 10px grey;
+    text-shadow: 0px 5px 10px #a3675c;
   }
   #team  figure:hover {
     background-color: #f1f1f2;
-    box-shadow: 0px 15px 30px grey;
+    -webkit-box-shadow: 0px 15px 30px grey;
+            box-shadow: 0px 15px 30px grey;
     border-radius: 4px;
+    -webkit-transition: 0.7s;
+    -o-transition: 0.7s;
     transition: 0.7s;  
   }
 
 /*portfolio section*/
   #portfolio h2 {
-    text-shadow: 0px 5px 10px grey;
+    text-shadow: 0px 5px 10px #a3675c;
   }
 
 /*package section*/
+  #package {
+    background-color: #f6f0ef;
+  }
   #package h2 {
-    text-shadow: 0px 5px 10px grey;
+    text-shadow: 0px 5px 10px #a3675c;
   }
   #package .card:hover {
-    background-color: #f1f1f2;
-    box-shadow: 0px 15px 30px grey;
+    background-color: #ede1de;
     border-radius: 5px;
     cursor: copy;
+    -webkit-transition: 0.7s;
+    -o-transition: 0.7s;
     transition: 0.7s;  
     }
   #package .alert-link {
     width: 110px;
   }
-
 /*address section*/
+  #address {
+    background-color: #f1f1f2;
+  }
   #address h2 {
-    text-shadow: 0px 5px 10px grey;
+    text-shadow: 0px 5px 10px #a3675c;
   }
   #address i:hover {
-    animation-name: name;
-    animation-duration: 0.7s;
-    animation-timing-function: ease-in-out;    
+    -webkit-animation-name: name;
+            animation-name: name;
+    -webkit-animation-duration: 0.7s;
+            animation-duration: 0.7s;
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;    
   }
   #address dl:hover {
-    background-color: #f1f1f2;
-    box-shadow: 0px 5px 15px grey;
+    background-color: #ede1de;
+    -webkit-box-shadow: 0px 5px 15px grey;
+            box-shadow: 0px 5px 15px grey;
     border-radius: 8px;
     cursor: copy;
+    -webkit-transition: 0.7s;
+    -o-transition: 0.7s;
     transition: 0.7s;  
   }
   iframe {
      height: 100%;
      width: 100%;
   }
-
 /*top*/
   #top {
     border-radius: 50%;
-    box-shadow: 0px 3px 8px grey;
+    -webkit-box-shadow: 0px 3px 8px grey;
+            box-shadow: 0px 3px 8px grey;
     position: fixed;
     right: 2%;
     bottom: 2%;
@@ -216,25 +244,31 @@ body {
   #top:hover {
     color: black;
     background-color: #f1f1f2;
-    box-shadow: 0px 8px 12px #f1f1f2;
+    -webkit-box-shadow: 0px 8px 12px #f1f1f2;
+            box-shadow: 0px 8px 12px #f1f1f2;
+    -webkit-transition: 0.7s;
+    -o-transition: 0.7s;
     transition: 0.7s;  
   }
-
 /*contact*/
   #contact {
     background-color: #e2dcdc;
   }
   #contact #form:hover {
     background-color: #f1f1f2;
-    box-shadow: 0px 5px 15px grey;
+    -webkit-box-shadow: 0px 5px 15px grey;
+            box-shadow: 0px 5px 15px grey;
     border-radius: 8px;
+    -webkit-transition: 0.7s;
+    -o-transition: 0.7s;
     transition: 0.7s; 
   }
   #contact input,
   #contact select,
   #contact textarea {
     border-radius: 5px;
-    box-shadow: 1px 3px 10px grey;
+    -webkit-box-shadow: 1px 3px 10px grey;
+            box-shadow: 1px 3px 10px grey;
   }
   #contact textarea {
     height: 100px;
@@ -243,5 +277,5 @@ body {
     border-radius: 5%;
   }
   #contact h4 {
-    text-shadow: 0px 5px 8px gray;
+    text-shadow: 0px 5px 8px #a3675c;
   }

@@ -7,7 +7,9 @@ h1 {
     text-shadow: 0px 5px 10px grey;
 }
 
-
+body {
+    background-color: #f6f0ef;
+}
 
 /* Toggle Styles */
 
@@ -131,6 +133,6 @@ h1 {
     #menu {
         position: sticky;
         top: 0;
-        width: 100vw;
+        width: 95vw;
         z-index: 1000;
     }
