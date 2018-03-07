@@ -1,151 +1,247 @@
 /*global customizaion*/
 * {
-  font-family: 'Neuton', serif;
+  
 }
 h1, h2, h3, h4, h5, h6 {font-weight: bold !important;}
 p {
 
 }
 body {
+  background-color: #f5f5f5;
   position: relative !important;
+}
+.bg-info {
+  background-color: rgba(255, 255, 255, 0.3)  !important;
+  border-radius: 3px;
 }
 /*global customizaion*/
 
-/*preloader*/
-#preloader {
-  color: #fff;
-  background-color: #000000;
-  position: fixed;
-  font-size: 80px;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-   
-}
-/*preloader*/
-
 /*logo*/
-.navbar-brand img {
-  height: 40px !important;
-}
-
-
-/*nav section*/
-.navbar-expand-lg .navbar-collapse {
-  padding-left: 150px;
-}
-.navbar {
-  background-color: transparent;
-}
-.top-nav-collapse {
-  background-color: #263238;
-}
-@media only screen and (max-width: 768px) {
-  .navbar {
-    background-color: #263238;
+  .navbar-brand img {
+    height: 40px !important;
   }
-}
 
 
-/*jumbtrol*/
-#bn-img {
-  width: 100%;
-  background-image: url('../img/banner.jpg');
-  background-position: center;
-  background-size: cover;
-  background-repeat: space;
-}
-#bn-txt {
-  font-size: 1.2em;
-  padding-top: 25vw;
-  padding-bottom: 5vw;
-}
+  /*nav section*/
+  .navbar-expand-lg .navbar-collapse {
+    padding-left: 150px;
+  }
+  .navbar {
+    background-color: transparent;
+  }
+  .top-nav-collapse {
+    background-color: #3e2723;
+  }
+  @media only screen and (max-width: 768px) {
+    .navbar {
+      background-color: #3e2723;
+    }
+  }
 
+/*jumbtron*/
+  #bn-img {
+    width: 100%;
+    background-image: url('../img/banner.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: space;
+  }
+  #bn-img {
+    text-shadow: 0px 5px 10px black;
+  }
+  #bn-txt {
+    font-size: 1.2em;
+    padding-top: 25vw;
+    padding-bottom: 5vw;
+  }
 
 /*ABOUT STARTS*/
-#about #center {
-  background-image: url('../img/about.jpg');
-  padding-right: 3rem;
-}
-#about i {
-  color: #84807f;
-  background-color: white;
-  border: #ED5A32 10px solid;
-  border-radius: 55%;
-  position: relative;
-  right: 3rem;
-}
-@media (max-width: 580px) {
-  #about i {
-    position: relative;
-    right: 1rem;
+  #about #center {
+    background-image: url('../img/about.jpg');
+    padding-right: 3rem;
   }
-}
+  #about h2 {
+    text-shadow: 0px 5px 10px grey;
+  }
+/*  #about dl:hover {
+    background-color: #f1f1f2;
+    box-shadow: 0px 15px 30px grey;
+    border-radius: 5px;
+    transition: 0.7s;
+  }*/
+  #about i {
+    color: #84807f;
+    background-color: white;
+    border: #ED5A32 10px solid;
+    border-radius: 55%;
+    position: relative;
+    right: 3rem;
+  }
+  #about i:hover {
+    animation-name: name;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+  }
+  @keyframes name {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+  }
 
+
+  @media (max-width: 580px) {
+    #about i {
+      position: relative;
+      left: -0.5rem
+    }
+  }
 
 /*servicer starts here*/
-#services {
-  background-color: #e2dcdc;
-}
-#services .block {
-  width: 100%;
-  background-color: #ffffff;
-  padding: 20px;
-  border-radius: 8px;
-}
+  #services {
+    background-color: #e2dcdc;
+  }
+  #services h2 {
+    text-shadow: 0px 5px 10px grey;
+  }
 
+  #services .block {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  #services .card:hover {
+    background-color: #f1f1f2;
+    box-shadow: 0px 15px 30px grey;
+    cursor: copy;
+    transition: 0.7s;
+  }
 
 /*designe section*/
-#design figure {
-  position: relative;
-}
-#design .date-tag {
-  position: absolute;
-  bottom: 5%;
-  left: 5%;
-}
-#design .date-tag h4,
-#design .date-tag h6 {
-  margin: 0;
-}
-#rel-image {
-  position: absolute;
-  width: 200px;
-  bottom: 5%
-}
-#design .rel-date {
-  position: absolute;
-  top: 5%;
-  left: 10%;
-}
+  #design figure {
+    position: relative;
+  }
+  #design h2 {
+    text-shadow: 0px 5px 10px grey;
+  }
+  #design #image figure:hover {
+    background-color: #f1f1f2;
+    box-shadow: 0px 15px 30px grey;
+    transition: 0.7s;
+  }
+  #design .card:hover  {
+    background-color: #f1f1f2;
+    box-shadow: 0px 15px 30px grey;
+    transition: 0.7s;
+  }
+  #design .date-tag {
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+  }
+  #design .date-tag h4,
+  #design .date-tag h6 {
+    margin: 0;
+  }
+  #rel-image {
+    position: absolute;
+    width: 200px;
+    bottom: 5%
+  }
+  #design .rel-date {
+    position: absolute;
+    top: 5%;
+    left: 10%;
+  }
 
+/*team section*/
+  #team h2 {
+    text-shadow: 0px 5px 10px grey;
+  }
+  #team  figure:hover {
+    background-color: #f1f1f2;
+    box-shadow: 0px 15px 30px grey;
+    border-radius: 4px;
+    transition: 0.7s;  
+  }
 
 /*portfolio section*/
+  #portfolio h2 {
+    text-shadow: 0px 5px 10px grey;
+  }
 
+/*package section*/
+  #package h2 {
+    text-shadow: 0px 5px 10px grey;
+  }
+  #package .card:hover {
+    background-color: #f1f1f2;
+    box-shadow: 0px 15px 30px grey;
+    border-radius: 5px;
+    cursor: copy;
+    transition: 0.7s;  
+    }
+  #package .alert-link {
+    width: 110px;
+  }
 
-/*packager section*/
+/*address section*/
+  #address h2 {
+    text-shadow: 0px 5px 10px grey;
+  }
+  #address i:hover {
+    animation-name: name;
+    animation-duration: 0.7s;
+    animation-timing-function: ease-in-out;    
+  }
+  #address dl:hover {
+    background-color: #f1f1f2;
+    box-shadow: 0px 5px 15px grey;
+    border-radius: 8px;
+    cursor: copy;
+    transition: 0.7s;  
+  }
+  iframe {
+     height: 100%;
+     width: 100%;
+  }
 
-#package button:hover #package h2 {
-  color: red !important;
-}
 /*top*/
-
-#top {
-  position: fixed;
-  right: 2%;
-  bottom: 2%;
-}
+  #top {
+    border-radius: 50%;
+    box-shadow: 0px 3px 8px grey;
+    position: fixed;
+    right: 2%;
+    bottom: 2%;
+  }
+  #top:hover {
+    color: black;
+    background-color: #f1f1f2;
+    box-shadow: 0px 8px 12px #f1f1f2;
+    transition: 0.7s;  
+  }
 
 /*contact*/
-#contact {
-  background: linear-gradient(to right, #fff, #4B515D);
-}
-#contact .border {
-  color:white;
-  background-color:;
-}
-
-#contact #form {
-  background-color: #e7e7e7;
-}
+  #contact {
+    background-color: #e2dcdc;
+  }
+  #contact #form:hover {
+    background-color: #f1f1f2;
+    box-shadow: 0px 5px 15px grey;
+    border-radius: 8px;
+    transition: 0.7s; 
+  }
+  #contact input,
+  #contact select,
+  #contact textarea {
+    border: 1px solid black;
+    border-radius: 5px;
+  }
+  #contact textarea {
+    height: 100px;
+  }
+  #contact #form {
+    border-radius: 5%;
+  }
+  #contact h4 {
+    text-shadow: 0px 5px 8px gray;
+  }
