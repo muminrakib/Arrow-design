@@ -30,11 +30,11 @@ body {
     background-color: transparent;
   }
   .top-nav-collapse {
-    background-color: #3e2723;
+    background-color: rgba(121, 85, 72, 0.9);
   }
   @media only screen and (max-width: 768px) {
     .navbar {
-      background-color: #3e2723;
+      background-color: rgba(121, 85, 72, 0.9);
     }
   }
 
@@ -233,8 +233,8 @@ body {
   #contact input,
   #contact select,
   #contact textarea {
-    border: 1px solid black;
     border-radius: 5px;
+    box-shadow: 1px 3px 10px grey;
   }
   #contact textarea {
     height: 100px;
