@@ -10,7 +10,9 @@ h1 {
 body {
     background-color: #f6f0ef;
 }
-
+.con-bg {
+  background-color:  #009900;
+}
 /* Toggle Styles */
 
 #wrapper {
@@ -33,7 +35,7 @@ body {
     height: 100%;
     margin-left: -250px;
     overflow-y: auto;
-    background: #795548;
+    background: #3e2723;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
