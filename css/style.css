@@ -1,81 +1,99 @@
-/*global customizaion*/
-* {
-  
-}
-h1, h2, h3, h4, h5, h6 {font-weight: bold !important;}
-p {
+/*font face*/
+  @font-face {
+      font-family: BebasNeue;
+      src: url(font/BebasNeue Bold.ttf);
+       font-weight: bold;
+  }
 
-}
-body {
-  background-color: #f5f5f5;
-  position: relative !important;
-}
-.bg-info {
-  background-color: rgba(255, 255, 255, 0.3)  !important;
-  border-radius: 3px;
-}
-.con-bg {
-  background-color:  #009900;
-}
+  .m-or {
+    color: #dc5c15;
+  }
+  .m-tx {
+    color: #454443;
+  }
+  .m-br {
+    background-color: #f4f2f2;
+    }
+/*font face*/
+/*global customizaion*/
+  h1, h2, h3, h4, h5, h6 {font-weight: bold !important;}
+
+  body {
+    position: relative !important;
+  }
+  .bg-info {
+    background-color: transparent !important;
+    border-bottom: 3px solid white;
+  }
+
 /*global customizaion*/
 
+/*large devices customization*/
+  @media (min-width: 780px) {
+    #navbarSupportedContent {
+      font-size: 17px;
+      font-family: 'BebasNeue', sans-serif;
+    }
+    #bn-txt h1 {
+      font-family: 'BebasNeue', sans-serif;
+      font-size: 60px;
+      padding-bottom: 5vh;
+    }
+  }
+/*large devices customization*/
 /*logo*/
   .navbar-brand img {
-    height: 40px !important;
+    height: 50px !important;
   }
-
-
-  /*nav section*/
-  .navbar-expand-lg .navbar-collapse {
-    padding-left: 150px;
-  }
+/*nav section*/
   .navbar {
     background-color: transparent;
   }
   .top-nav-collapse {
-    background-color: #3e2723;
+    background-color: #585858;
   }
   @media only screen and (max-width: 768px) {
     .navbar {
-      background-color: #3e2723;
+      background-color: #585858;
     }
   }
-
 /*jumbtron*/
-  #bn-img {
+  #home {
     width: 100%;
     background-image: url('../img/banner.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: space;
   }
-  #bn-img {
-    text-shadow: 0px 5px 10px #a3675c;
-  }
-  #bn-txt {
-    font-size: 1.2em;
-    padding-top: 25vw;
-    padding-bottom: 5vw;
-  }
 
+  #bn-txt {
+    font-family: 'BebasNeue', sans-serif;
+    font-weight: bolder;
+    text-transform: uppercase;
+    text-align: left;
+    padding-top: 30vh;
+    padding-bottom: 18vh;
+  }
 /*ABOUT STARTS*/
+  #about {
+    background-color: #fff;
+  }
   #about #center {
     background-image: url('../img/about.jpg');
-    padding-right: 3rem;
   }
-  #about h2 {
-    text-shadow: 0px 5px 10px #a3675c;
+  #about hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #fff;
+    margin: 1em 0;
+    padding: 0; 
   }
-  /*  #about dl:hover {
-      background-color: #f1f1f2;
-      box-shadow: 0px 15px 30px grey;
-      border-radius: 5px;
-      transition: 0.7s;
-    }*/
+
   #about i {
     color: #84807f;
     background-color: white;
-    border: #ED5A32 10px solid;
+    border: #cc4329 10px solid;
     border-radius: 55%;
     position: relative;
     right: 3rem;
@@ -104,13 +122,6 @@ body {
     }
   }
 /*servicer starts here*/
-  #services {
-    background-color: #f1f1f2;
-  }
-  #services h2 {
-    text-shadow: 0px 5px 10px #a3675c;
-  }
-
   #services .block {
     width: 100%;
     background-color: #ffffff;
@@ -118,28 +129,31 @@ body {
     border-radius: 8px;
   }
   #services .card:hover {
-    background-color: #ede1de;
-
+    background-color: #e9e2e2;
     cursor: copy;
     -webkit-transition: 0.7s;
     -o-transition: 0.7s;
     transition: 0.7s;
   }
-
 /*designe section*/
   #design figure {
     position: relative;
   }
-  #design h2 {
-    text-shadow: 0px 5px 10px  #a3675c;
-  }
   #design #image figure:hover {
-    background-color: #a3675c;
-
-    -webkit-transition: 0.7s;
-    -o-transition: 0.7s;
-    transition: 0.7s;
+    -webkit-animation-name: roll;
+            animation-name: roll;
+    -webkit-animation-duration: 1.2s;
+            animation-duration: 1.2s;
   }
+  @-webkit-keyframes roll {
+    0% {-webkit-transform: rotateY(0deg);transform: rotateY(0deg);}
+    100% {-webkit-transform: rotateY(360deg);transform: rotateY(360deg);}
+  }
+  @keyframes roll {
+    0% {-webkit-transform: rotateY(0deg);transform: rotateY(0deg);}
+    100% {-webkit-transform: rotateY(360deg);transform: rotateY(360deg);}
+  }
+  
   #design .card:hover  {
     background-color: #ede1de;
 
@@ -167,14 +181,9 @@ body {
     left: 10%;
   }
 /*team section*/
-  #team {
-    background-color: #f1f1f2;
-  }
-  #team h2 {
-    text-shadow: 0px 5px 10px #a3675c;
-  }
-  #team  figure:hover {
-    background-color: #f1f1f2;
+
+  #team  figure figcaption:hover {
+    background-color: rgba(166, 166, 166, 0.7);
     -webkit-box-shadow: 0px 15px 30px grey;
             box-shadow: 0px 15px 30px grey;
     border-radius: 4px;
@@ -187,16 +196,13 @@ body {
   #portfolio h2 {
     text-shadow: 0px 5px 10px #a3675c;
   }
+  .m-sil {
+    background-color: rgba(166, 166, 166, 0.7);
+  }
 
 /*package section*/
-  #package {
-    background-color: #f6f0ef;
-  }
-  #package h2 {
-    text-shadow: 0px 5px 10px #a3675c;
-  }
   #package .card:hover {
-    background-color: #ede1de;
+    background-color: #e9e2e2;
     border-radius: 5px;
     cursor: copy;
     -webkit-transition: 0.7s;
@@ -207,22 +213,16 @@ body {
     width: 110px;
   }
 /*address section*/
-  #address {
-    background-color: #f1f1f2;
-  }
-  #address h2 {
-    text-shadow: 0px 5px 10px #a3675c;
-  }
   #address i:hover {
-    -webkit-animation-name: name;
-            animation-name: name;
+    -webkit-animation-name: roll;
+            animation-name: roll;
     -webkit-animation-duration: 0.7s;
             animation-duration: 0.7s;
     -webkit-animation-timing-function: ease-in-out;
             animation-timing-function: ease-in-out;    
   }
-  #address dl:hover {
-    background-color: #ede1de;
+  #address .row .wow:hover {
+    background-color: #e9e2e2;
     -webkit-box-shadow: 0px 5px 15px grey;
             box-shadow: 0px 5px 15px grey;
     border-radius: 8px;
@@ -238,8 +238,6 @@ body {
 /*top*/
   #top {
     border-radius: 50%;
-    -webkit-box-shadow: 0px 3px 8px grey;
-            box-shadow: 0px 3px 8px grey;
     position: fixed;
     right: 2%;
     bottom: 2%;
@@ -257,7 +255,7 @@ body {
   #contact {
     background-color: #e2dcdc;
   }
-  #contact #form:hover {
+  #contact #form {
     background-color: #f1f1f2;
     -webkit-box-shadow: 0px 5px 15px grey;
             box-shadow: 0px 5px 15px grey;
@@ -266,9 +264,9 @@ body {
     -o-transition: 0.7s;
     transition: 0.7s; 
   }
-  #contact input,
-  #contact select,
-  #contact textarea {
+  #contact #form:hover #contact input,
+  #contact #form:hover #contact select,
+  #contact #form:hover #contact textarea {
     border-radius: 5px;
     -webkit-box-shadow: 1px 3px 10px grey;
             box-shadow: 1px 3px 10px grey;

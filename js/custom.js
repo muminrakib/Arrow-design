@@ -17,8 +17,8 @@ $(".nav-item").click(function(){
 //==wow==
 new WOW().init();
 
-// custom dataspy
 
+// custom dataspy
 $("#home").on("mouseenter", function(){
 	$("a[href='#home']").parent().addClass('bg-info');
 	$(".nav-item").not(".nav-item:nth-child(1)").removeClass('bg-info');
